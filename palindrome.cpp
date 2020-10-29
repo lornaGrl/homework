@@ -29,7 +29,8 @@ void InitStack(seqstack *&S)
 		 {
 			printf("输入字符串不合法\n");
 			S->top=-1;
-			Push(S);
+				Push(S);
+			
 			 return 0;
 		 }
 		 S->top++;
@@ -46,7 +47,7 @@ void InitStack(seqstack *&S)
 	 a=getchar();
 	 while(a!='@')
 	 {
-		 if(a=='&')
+		 if(a=='&'||a=='\n')
 		 {
 			 printf("输入字符串不合法\n");
 			 S->top=-1;
@@ -63,7 +64,7 @@ void InitStack(seqstack *&S)
 		 if(a!=b)
 			 return 1;
 		
-		a=getchar();
+		 a=getchar();
 	 }
 
 	 if(S->top>=0)
